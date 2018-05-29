@@ -5,6 +5,8 @@ package BookLibrary;
  */
 public class App {
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        Book b = new BookItem("W Pustynie i w Puszczy", "Henryk Sienkiewicz", 1992);
+
+        System.out.println(b.toString());
     }
 }
