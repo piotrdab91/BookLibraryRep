@@ -176,14 +176,38 @@ public class LibraryTest {
     }
 
     @Test
-    public void ListingBooksbByTitle() {
+    public void FindingBooksbByTitleShouldReturnListWithProperSize() {
         BookItem bookItem_1 = new BookItem("Potop", "Henryk Sienkiewicz", 1974);
         BookItem bookItem_2 = new BookItem("Lalka", "Boleslaw Prus", 2010);
         BookItem bookItem_3 = new BookItem("Lalka", "Boleslaw Prus", 1991);
+        BookItem bookItem_4 = new BookItem("Lalka", "Boleslaw Prus", 1947);
         Library lib = new Library();
         lib.addBook(bookItem_1);
         lib.addBook(bookItem_2);
         lib.addBook(bookItem_3);
-        System.out.println(lib.findBook("", "Henryk Sienkiewicz", 0).toString());
+        lib.addBook(bookItem_4);
+        System.out.println(lib.findBook("Lalka").toString());
+        assertEquals(3, lib.findBook("Lalka").size());
     }
+
+    @Test
+    public void FindingBooksbByTitleAndYearShouldReturnListWithProperSize() {
+        BookItem bookItem_1 = new BookItem("Potop", "Henryk Sienkiewicz", 1974);
+        BookItem bookItem_2 = new BookItem("Lalka", "Boleslaw Prus", 2010);
+        BookItem bookItem_3 = new BookItem("Lalka", "Boleslaw Prus", 1991);
+        BookItem bookItem_4 = new BookItem("Lalka", "Boleslaw Prus", 1947);
+        Library lib = new Library();
+        lib.addBook(bookItem_1);
+        lib.addBook(bookItem_2);
+        lib.addBook(bookItem_3);
+        lib.addBook(bookItem_4);
+        System.out.println(lib.findBook("Lalka", 1991).toString());
+        assertEquals(1, lib.findBook("Lalka", 1991).size());
+    }
+
+    @Test
+    public void lentBookbyID() {
+
+    }
+
 }

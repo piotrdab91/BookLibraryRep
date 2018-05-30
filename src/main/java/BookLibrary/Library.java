@@ -93,11 +93,32 @@ public class Library {
         return mergeBookItemsList(bookList);
     }
 
+    public List<BookItem> findBook(String title, String author) {
+
+        return findBook("title", author, 0);
+    }
+
+    public List<BookItem> findBook(String title, int year) {
+
+        return findBook("title", "", year);
+    }
+
+    public List<BookItem> findBook(String title) {
+
+        return findBook(title, "", 0);
+    }
+
     private List<BookItem> mergeBookItemsList(List<Book> bookList) {
         List<BookItem> result = new ArrayList<>();
         for (Book b : bookList) {
             result.addAll(bookStorage.get(b));
         }
         return result;
+    }
+
+    public void showBookItemDetails(int id) {
+        BookItem bookIt = findBookItem(String.valueOf(id));
+        System.out.println(bookIt.toString());
+
     }
 }

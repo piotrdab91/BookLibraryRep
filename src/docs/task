@@ -11,7 +11,7 @@ Non-functional requirements:
 
 Library requirements
 
-1. Library contains books to lend (at the beginning there are no books in the library)
+1. Library contains books to lend (at the beginning there are no books in the library) -->
 2. Book consist of title, year and author.
 4. Each book should have unique identifier (ID) across application.
 5. Should be possible to add new book to the library. ID should not be passed as argument. ID should be generated inside Library.
