@@ -1,0 +1,6 @@
+To build project and run tests:
+1. Clone repository to new directory on your computer(You can do it using IDE like Intellij, Eclipse etc. or from CMD )
+2. Import project to your IDE.
+3. Ensure you have installed Maven plugin.
+4. Import all dependencies using Maven.
+5. Open project tree go to src->rest->java. Right-Click at the BookLibrary directory and  choose Run 'Tests in BookLibrary'...
