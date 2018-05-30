@@ -75,17 +75,5 @@ public class BookItemTest {
         assertFalse(bi.returnBook());
     }
 
-    @Test
-    public void equalsOfBookAndBookItemForTheSameAuthorTitleYearCombShouldReturnTrue() {
-        Book book = new Book("Lalka", "Boleslaw Prus", 2001);
-        BookItem bi = new BookItem("Lalka", "Boleslaw Prus", 2001);
-        assertTrue(book.equals(bi));
-    }
 
-    @Test
-    public void equalsOfBookItemAndBookForTheSameAuthorTitleYearCombShouldReturnTrue() {
-        Book book = new Book("Lalka", "Boleslaw Prus", 2001);
-        BookItem bi = new BookItem("Lalka", "Boleslaw Prus", 2001);
-        assertTrue(bi.equals(book));
-    }
 }

@@ -55,4 +55,22 @@ public class BookItem extends Book {
     public String getBorrowerName() {
         return borrowerName;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+
+        BookItem bookItem = (BookItem) o;
+
+        return Id != null ? Id.equals(bookItem.Id) : bookItem.Id == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = super.hashCode();
+        result = 31 * result + (Id != null ? Id.hashCode() : 0);
+        return result;
+    }
 }
