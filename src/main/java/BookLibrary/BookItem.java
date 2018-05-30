@@ -25,7 +25,8 @@ public class BookItem extends Book {
                 "title='" + super.getTitle() + '\'' +
                 ", author='" + super.getAuthor() + '\'' +
                 ", year=" + super.getYear() + '\'' +
-                ", available=" + this.itsAvailable() + '}';
+                ", available=" + this.itsAvailable() +
+                ", borrowerName:" + this.getBorrowerName() + '}';
     }
 
     public String getId() {

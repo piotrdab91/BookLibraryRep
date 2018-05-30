@@ -24,6 +24,10 @@ public class Library {
         }
     }
 
+    public boolean addBook(String title, String author, int year) {
+        return addBook(new BookItem(title, author, year));
+    }
+
     public Map<Book, List<BookItem>> getBookStorage() {
         return bookStorage;
     }
@@ -116,8 +120,8 @@ public class Library {
         return result;
     }
 
-    public void showBookItemDetails(int id) {
-        BookItem bookIt = findBookItem(String.valueOf(id));
+    public void showBookItemDetails(String Id) {
+        BookItem bookIt = findBookItem(Id);
         System.out.println(bookIt.toString());
 
     }

@@ -16,6 +16,7 @@ public class App {
         lib.addBook(c_1);
         b_1.lendBook("Jan Kowalski");
         b_1.returnBook();
-        lib.listAllBooks();
+        //lib.listAllBooks();
+        lib.showBookItemDetails(c_1.getId());
     }
 }

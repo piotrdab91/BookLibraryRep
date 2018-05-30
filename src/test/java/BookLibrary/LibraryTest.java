@@ -30,8 +30,7 @@ public class LibraryTest {
     @Test
     public void addingNewBookShouldReturnTrue() throws Exception {
         Library lib = new Library();
-        BookItem bookItem = new BookItem("Potop", "Henryk Sienkiewicz", 1974);
-        assertTrue(lib.addBook(bookItem));
+        assertTrue(lib.addBook("Potop", "Henryk Sienkiewicz", 1974));
     }
 
     @Test
